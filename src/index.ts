@@ -12,6 +12,10 @@ app.get("/", async (req, res) => {
   res.json({ Hello: "World" });
 });
 
+app.get("/headers", async (req, res) => {
+  res.json({ headers:req.headers });
+});
+
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
